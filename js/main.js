@@ -357,6 +357,58 @@ function handleInitialPageLoad() {
     }
 }
 
+// Scroll animation functionality
+function setupScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for scroll animations
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Loading screen functionality
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        // Wait for everything to load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    // Trigger blur fade-in transitions for all content
+                    document.body.classList.add('loading-complete');
+                    const mainContent = document.querySelector('.main-content');
+                    if (mainContent) {
+                        mainContent.classList.add('fade-in');
+                    }
+                    // Trigger fade-in for all sections with section-fade-in class
+                    const sections = document.querySelectorAll('.section-fade-in');
+                    sections.forEach((section, index) => {
+                        setTimeout(() => {
+                            section.classList.add('visible');
+                        }, index * 200); // Stagger the animations
+                    });
+                }, 1000);
+            }, 1000); // Minimum 1 second loading time
+        });
+    }
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     setupMobileMenu();
@@ -364,6 +416,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setupNavigation();
     handleInitialPageLoad();
     fetchStats();
+    setupScrollAnimations();
+    hideLoadingScreen();
     
     // Refresh stats every 30 seconds
     setInterval(fetchStats, 30000);

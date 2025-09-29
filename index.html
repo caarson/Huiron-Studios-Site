@@ -37,8 +37,15 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body class="font-inter bg-gray-900 text-white antialiased">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-black flex items-center justify-center z-50 transition-opacity duration-1000">
+        <div class="text-center">
+            <img src="imgs/HuiLogo.png" alt="Huiron Studios Logo" class="w-32 h-32 mx-auto rounded-full animate-pulse">
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-md border-b border-gray-700 z-50">
+    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-md border-b border-gray-700 z-40">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <img src="imgs/HuiLogo.png" alt="Huiron Studios Logo" class="w-10 h-10 rounded-full">
@@ -84,17 +91,17 @@
             <div class="absolute bottom-80 left-30 w-26 h-26 bg-purple-500 rounded-full opacity-15 animate-float" style="animation-delay: 3.5s;"></div>
         </div>
         
-        <div class="container mx-auto text-center max-w-4xl relative z-10">
+        <div class="container mx-auto text-center max-w-4xl relative z-10 main-content">
             <div class="mb-8">
-                <img src="imgs/HuiLogo.png" alt="Huiron Studios Logo" class="w-24 h-24 mx-auto mb-6 rounded-full shadow-lg">
+                <img src="imgs/HuiLogo.png" alt="Huiron Studios Logo" class="hero-logo w-24 h-24 mx-auto mb-6 rounded-full shadow-lg">
             </div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+            <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
                 Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Immersive</span> Roblox Experiences
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
+            <p class="hero-subtitle text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
                 Huiron Studios is a premier game development studio creating cutting-edge Roblox games that captivate players worldwide. We combine innovation, quality, and community to deliver exceptional gaming adventures.
             </p>
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div class="hero-buttons flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <button onclick="showPage('games')" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
                     <i class="fas fa-gamepad mr-3"></i>Explore Our Games
                 </button>
@@ -111,7 +118,7 @@
     </section>
 
         <!-- Purple-Themed Landing Section -->
-    <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden">
+    <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
         <!-- Purple particles background -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div class="absolute top-10 left-10 w-16 h-16 bg-purple-500 rounded-full opacity-20 animate-float"></div>
@@ -184,7 +191,7 @@
 
 
         <!-- Immersive Worlds Showcase -->
-        <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden">
+        <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
             <!-- Animated background elements -->
             <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <div class="absolute top-10 left-10 w-6 h-6 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
@@ -327,7 +334,7 @@
         </section>
 
         <!-- Player Stories - Circular Layout -->
-        <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden">
+        <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
             <!-- Player Stories particles background -->
             <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                 <div class="absolute top-20 left-10 w-14 h-14 bg-purple-500 rounded-full opacity-20 animate-float"></div>
@@ -500,7 +507,7 @@
 
         <!-- Games Page - Dark Mode -->
         <div id="games-page" class="page">
-            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden">
+            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
                 <!-- Game particles background -->
                 <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                     <div class="absolute top-20 left-10 w-14 h-14 bg-blue-500 rounded-full opacity-20 animate-float"></div>
@@ -573,7 +580,7 @@
 
         <!-- Groups Page - Dark Mode -->
         <div id="groups-page" class="page">
-            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden">
+            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
                 <!-- Groups particles background -->
                 <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                     <div class="absolute top-20 left-10 w-14 h-14 bg-green-500 rounded-full opacity-20 animate-float"></div>
@@ -813,7 +820,7 @@
 
         <!-- About Page - Dark Mode -->
         <div id="about-page" class="page">
-            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden">
+            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
                 <!-- About particles background -->
                 <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
                     <div class="absolute top-20 left-10 w-14 h-14 bg-purple-500 rounded-full opacity-20 animate-float"></div>
@@ -822,49 +829,201 @@
                     <div class="absolute bottom-20 right-10 w-10 h-10 bg-green-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
                     <div class="absolute top-60 right-40 w-18 h-18 bg-yellow-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
                 </div>
-                <div class="container mx-auto max-w-4xl">
-                    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">About Huiron Studios</h2>
-                    <p class="text-xl text-gray-400 text-center mb-12">Founded in 2025, Huiron Studios is committed to quality and innovation in the Roblox ecosystem.</p>
-                    
-                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-sm">
-                        <p class="text-lg text-gray-300 mb-6">
-                            Although Huiron is quite small now, we prioritize quality on our experiences, ensuring players have a great time. With upcoming projects, we do believe we can take Huiron to the next level, starting now.
-                        </p>
-                        <p class="text-lg text-gray-300">
-                            Huiron is originally based off the username Huirzv, representing him. Our mission is to create new experiences where we can be proud of, and scale it up to new games and platforms.
+                <div class="container mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400">Our Story</span>
+                        </h2>
+                        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
+                            From a single vision to a thriving community - discover the journey behind Huiron Studios.
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                        <div class="text-center">
-                            <div class="w-16 h-16 mx-auto rounded-full bg-blue-900/30 flex items-center justify-center mb-4">
-                                <i class="fas fa-diamond text-2xl text-blue-400"></i>
+                    <!-- Mission & Vision Split Layout -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
+                        <!-- Mission Card -->
+                        <div class="group relative bg-gradient-to-br from-purple-900/40 to-blue-900/40 border border-purple-500/30 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                            <div class="absolute -top-4 -right-4 w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-rocket text-2xl text-white"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Quality</h3>
-                            <p class="text-gray-400">We prioritize polish and performance in every game we create.</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-16 h-16 mx-auto rounded-full bg-green-900/30 flex items-center justify-center mb-4">
-                                <i class="fas fa-users text-2xl text-green-400"></i>
+                            <div class="mb-6">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Our Mission</h3>
+                                <div class="w-16 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mb-4"></div>
+                                <p class="text-gray-300 leading-relaxed text-lg">
+                                    To create unforgettable Roblox experiences that captivate players worldwide through innovation, quality, and passionate community engagement.
+                                </p>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Community</h3>
-                            <p class="text-gray-400">Our players are at the heart of everything we do and create.</p>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-star text-purple-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Prioritize quality and polish in every experience</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-users text-blue-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Foster vibrant, engaged player communities</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-lightbulb text-pink-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Push creative boundaries and innovate constantly</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-black text-purple-400 mb-2">10K+</div>
-                            <div class="text-gray-300 font-medium">Happy Players</div>
+
+                        <!-- Vision Card -->
+                        <div class="group relative bg-gradient-to-br from-blue-900/40 to-pink-900/40 border border-blue-500/30 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+                            <div class="absolute -top-4 -right-4 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-eye text-2xl text-white"></i>
+                            </div>
+                            <div class="mb-6">
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Our Vision</h3>
+                                <div class="w-16 h-1 bg-gradient-to-r from-blue-400 to-pink-400 mb-4"></div>
+                                <p class="text-gray-300 leading-relaxed text-lg">
+                                    To become a leading force in the Roblox ecosystem, known for groundbreaking experiences that redefine what's possible on the platform.
+                                </p>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-globe text-blue-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Reach millions of players worldwide</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-pink-500/20 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-trophy text-pink-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Set new standards for quality and innovation</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-heart text-purple-400 text-sm"></i>
+                                    </div>
+                                    <p class="text-gray-300 text-sm">Build lasting relationships with our community</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl md:text-4xl font-black text-pink-400 mb-2">98%</div>
-                            <div class="text-gray-300 font-medium">Positive Reviews</div>
+                    </div>
+
+                    <!-- Journey Timeline -->
+                    <div class="max-w-4xl mx-auto mb-20">
+                        <div class="text-center mb-12">
+                            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Journey</h3>
+                            <p class="text-xl text-gray-300">From humble beginnings to exciting future plans</p>
                         </div>
+
+                        <div class="space-y-8">
+                            <!-- Timeline Item 1 -->
+                            <div class="flex items-start space-x-6">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
+                                    <i class="fas fa-seedling text-white"></i>
+                                </div>
+                                <div class="flex-1 bg-gradient-to-r from-purple-900/40 to-blue-900/40 border border-purple-500/30 rounded-2xl p-6">
+                                    <h4 class="text-xl font-bold text-white mb-2">Foundation (2025)</h4>
+                                    <p class="text-gray-300">
+                                        Huiron Studios was born from the username Huirzv, representing a passion for creating quality Roblox experiences. We started small but dreamed big.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 2 -->
+                            <div class="flex items-start space-x-6">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+                                    <i class="fas fa-gamepad text-white"></i>
+                                </div>
+                                <div class="flex-1 bg-gradient-to-r from-blue-900/40 to-pink-900/40 border border-blue-500/30 rounded-2xl p-6">
+                                    <h4 class="text-xl font-bold text-white mb-2">First Releases</h4>
+                                    <p class="text-gray-300">
+                                        Launched our initial portfolio of 7 games, including popular tower experiences and adventure zones that quickly gained traction in the Roblox community.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 3 -->
+                            <div class="flex items-start space-x-6">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-pink-500 flex items-center justify-center">
+                                    <i class="fas fa-users text-white"></i>
+                                </div>
+                                <div class="flex-1 bg-gradient-to-r from-pink-900/40 to-purple-900/40 border border-pink-500/30 rounded-2xl p-6">
+                                    <h4 class="text-xl font-bold text-white mb-2">Community Growth</h4>
+                                    <p class="text-gray-300">
+                                        Built a thriving community across multiple groups with thousands of members. Our Clothing Society became one of our most popular ventures.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 4 -->
+                            <div class="flex items-start space-x-6">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center">
+                                    <i class="fas fa-rocket text-white"></i>
+                                </div>
+                                <div class="flex-1 bg-gradient-to-r from-yellow-900/40 to-orange-900/40 border border-yellow-500/30 rounded-2xl p-6">
+                                    <h4 class="text-xl font-bold text-white mb-2">Future Horizons</h4>
+                                    <p class="text-gray-300">
+                                        With ambitious projects in development and a growing team, we're poised to take Huiron Studios to the next level and beyond.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="max-w-6xl mx-auto">
+                        <div class="text-center mb-12">
+                            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Values</h3>
+                            <p class="text-xl text-gray-300">The principles that guide everything we create</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- Value 1 -->
+                            <div class="group bg-gradient-to-br from-purple-900/40 to-blue-900/40 border border-purple-500/30 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                                <div class="w-16 h-16 mx-auto rounded-full bg-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-diamond text-2xl text-purple-400"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-3">Quality First</h4>
+                                <p class="text-gray-300 text-sm">We never compromise on polish, performance, or player experience in our creations.</p>
+                            </div>
+
+                            <!-- Value 2 -->
+                            <div class="group bg-gradient-to-br from-blue-900/40 to-green-900/40 border border-blue-500/30 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                                <div class="w-16 h-16 mx-auto rounded-full bg-blue-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-users text-2xl text-blue-400"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-3">Community Driven</h4>
+                                <p class="text-gray-300 text-sm">Our players are at the heart of everything we do and create together.</p>
+                            </div>
+
+                            <!-- Value 3 -->
+                            <div class="group bg-gradient-to-br from-green-900/40 to-yellow-900/40 border border-green-500/30 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                                <div class="w-16 h-16 mx-auto rounded-full bg-green-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-lightbulb text-2xl text-green-400"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-3">Innovation</h4>
+                                <p class="text-gray-300 text-sm">We constantly push boundaries and explore new creative possibilities.</p>
+                            </div>
+
+                            <!-- Value 4 -->
+                            <div class="group bg-gradient-to-br from-yellow-900/40 to-pink-900/40 border border-yellow-500/30 rounded-2xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                                <div class="w-16 h-16 mx-auto rounded-full bg-yellow-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <i class="fas fa-heart text-2xl text-yellow-400"></i>
+                                </div>
+                                <h4 class="text-xl font-bold text-white mb-3">Passion</h4>
+                                <p class="text-gray-300 text-sm">We pour our hearts into every project, driven by genuine love for game development.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
 
     <!-- Shared Featured Groups Section (bottom across all pages) -->
-    <section class="py-16 md:py-24 px-4 md:px-8 bg-black relative overflow-hidden">
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-black relative overflow-hidden section-fade-in">
         <!-- Groups particles background -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div class="absolute top-20 left-10 w-14 h-14 bg-blue-500 rounded-full opacity-20 animate-float"></div>
@@ -912,7 +1071,7 @@
     </section>
 
     <!-- Contact Section (bottom across all pages) -->
-    <section class="py-16 md:py-24 px-4 md:px-8 bg-black text-center relative overflow-hidden">
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-black text-center relative overflow-hidden section-fade-in">
         <!-- Contact particles background -->
         <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
             <div class="absolute top-20 left-10 w-14 h-14 bg-purple-500 rounded-full opacity-20 animate-float"></div>
