@@ -1,325 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="https://i.ibb.co/992cYkfs/Hui.png">
+    <link rel="icon" type="image/png" href="imgs/HuiLogo.png">
     <meta charset="UTF-8">
     <!-- Open Graph (Discord, Facebook, etc.) -->
-<meta property="og:title" content="Huiron Studios - Redefining Experiences">
-<meta property="og:description" content="Huiron Studios is redefining digital experiences with creativity, innovation, and immersive design.">
-<meta property="og:image" content="https://i.ibb.co/992cYkfs/Hui.png">
-<meta property="og:url" content="https://yourwebsite.com">
-<meta property="og:type" content="website">
+    <meta property="og:title" content="Huiron Studios - Redefining Experiences">
+    <meta property="og:description" content="Huiron Studios is redefining digital experiences with creativity, innovation, and immersive design.">
+    <meta property="og:image" content="imgs/HuiLogo.png">
+    <meta property="og:url" content="https://huironstudios.com">
+    <meta property="og:type" content="website">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Huiron Studios - Redefining Experiences">
-<meta name="twitter:description" content="Huiron Studios is an upcoming studio aiming to provide users with a great experience.">
-<meta name="twitter:image" content="https://i.ibb.co/992cYkfs/Hui.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Huiron Studios - Redefining Experiences">
+    <meta name="twitter:description" content="Huiron Studios is an upcoming studio aiming to provide users with a great experience.">
+    <meta name="twitter:image" content="imgs/HuiLogo.png">
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="description" content="Huiron Studios - A premier Roblox game studio creating immersive experiences with quality, community, and innovation at our core.">
+    <meta name="keywords" content="roblox, game studio, huiron studios, games, development, gaming community">
+    <meta name="author" content="Huiron Studios">
+    <meta name="robots" content="index, follow">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huiron Studios - Redefining Experiences</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    
+    <!-- External CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0d0d12 0%, #1a1a2e 100%);
-            color: #e0e0e0;
-            overflow-x: hidden;
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), 
-                        url('https://i.ibb.co/XZWvgfsQ/Pink-Photo-Collage-Moodboard-Instagram-Post.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-        .text-gradient {
-            background: linear-gradient(90deg, #6EE7B7 0%, #3B82F6 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .counter-card-bg, .game-card, .group-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            transition: all 0.3s ease;
-        }
-        .counter-card-bg:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-        }
-        .game-card, .group-card {
-            background: rgba(255, 255, 255, 0.03);
-        }
-        .game-card:hover, .group-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
-        }
-        .game-image img {
-            transition: transform 0.5s ease;
-        }
-        .game-card:hover .game-image img {
-            transform: scale(1.1);
-        }
-        .btn-glow {
-            background: linear-gradient(90deg, #3B82F6 0%, #6EE7B7 100%);
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-            transition: all 0.3s ease;
-        }
-        .btn-glow:hover {
-            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
-            transform: translateY(-2px);
-        }
-        .navbar {
-            background: rgba(13, 13, 18, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #3B82F6 0%, #6EE7B7 100%);
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-            pointer-events: none;
-        }
-        .particle {
-            position: absolute;
-            background: rgba(59, 130, 246, 0.5);
-            border-radius: 50%;
-        }
-        .mobile-menu {
-            transition: max-height 0.5s ease-out;
-        }
-        .page {
-            display: none;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-        .page.active {
-            display: block;
-            opacity: 1;
-            animation: page-fade-in 0.7s;
-        }
-        @keyframes page-fade-in {
-            from { opacity: 0; transform: translateY(25px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
-        /* Ensure all h1/h2/h3/h4/h5/h6 are centered */
-        h1, h2, h3, h4, h5, h6 { text-align: center!important; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="flex flex-col min-h-screen">
-    <!-- Particle Background -->
-    <div class="particles" id="particles"></div>
-    <!-- Modal for messages -->
-    <div id="modal" class="hidden fixed top-5 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg z-50">
-        <span id="modal-text"></span>
-    </div>
-    <!-- Header -->
-    <header class="fixed w-full z-50 navbar">
-        <div class="container mx-auto p-4 md:p-6 flex items-center justify-between">
+<body class="font-inter bg-gray-900 text-white antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800/90 backdrop-blur-md border-b border-gray-700 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <img src="https://i.ibb.co/992cYkfs/Hui.png" alt="Huiron Studios Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg">
-                <span class="text-2xl md:text-3xl font-extrabold text-white">Huiron Studios</span>
+                <img src="imgs/HuiLogo.png" alt="Huiron Studios Logo" class="w-10 h-10 rounded-full">
+                <span class="text-2xl font-bold text-white">Huiron Studios</span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm">
-                <a href="#home" class="nav-link text-gray-300 hover:text-white transition relative group" data-page="home">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#games" class="nav-link text-gray-300 hover:text-white transition relative group" data-page="games">
-                    Games
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#groups" class="nav-link text-gray-300 hover:text-white transition relative group" data-page="groups">
-                    Groups
-                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all group-hover:w-full"></span>
-                </a>
-            </nav>
+            <div class="hidden md:flex space-x-4 text-sm">
+                <a href="#home" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="home">Home</a>
+                <a href="#games" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="games">Games</a>
+                <a href="#groups" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="groups">Groups</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="about">About</a>
+            </div>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
-        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-gray-900 max-h-0 overflow-hidden">
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden bg-gray-800 border-t border-gray-700 max-h-0 overflow-hidden">
             <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#home" class="nav-link text-gray-300 hover:text-white transition" data-page="home">Home</a>
-                <a href="#games" class="nav-link text-gray-300 hover:text-white transition" data-page="games">Games</a>
-                <a href="#groups" class="nav-link text-gray-300 hover:text-white transition" data-page="groups">Groups</a>
+                <a href="#home" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="home">Home</a>
+                <a href="#games" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="games">Games</a>
+                <a href="#groups" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="groups">Groups</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-purple-400 transition font-medium" data-page="about">About</a>
             </div>
         </div>
-    </header>
-    <main class="flex-grow pt-20">
-        <!-- Home Page -->
-        <div id="home-page" class="page active">
-            <!-- Hero Section -->
-            <section class="relative flex items-center justify-center text-center px-8 py-20 md:py-32 hero-bg">
-                <div class="relative z-10 max-w-4xl mx-auto space-y-8">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight text-white">
-                        Shaping <span class="text-gradient">Experiences</span> for what's next on Roblox.
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-                        Huiron Studios is a newly founded, upcoming game studio on roblox aiming to release new experiences towards players.
+    </nav>
+
+    <main class="pt-20">
+    <!-- Hero Section - Enhanced with Original Background -->
+    <section id="home-page" class="page home-only active min-h-[70vh] flex items-start px-4 pt-28 pb-16 relative overflow-hidden" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://i.ibb.co/XZWvgfsQ/Pink-Photo-Collage-Moodboard-Instagram-Post.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Enhanced purple particles background (adjusted to not force extra vertical perception) -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <!-- Purple particles to match theme -->
+            <div class="absolute top-10 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-float"></div>
+            <div class="absolute top-40 right-20 w-16 h-16 bg-purple-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-20 w-24 h-24 bg-purple-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-10 right-10 w-12 h-12 bg-purple-300 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+            
+            <!-- Additional purple particles -->
+            <div class="absolute top-20 right-10 w-14 h-14 bg-purple-400 rounded-full opacity-30 animate-float" style="animation-delay: 0.5s;"></div>
+            <div class="absolute top-60 left-20 w-18 h-18 bg-purple-500 rounded-full opacity-25 animate-float" style="animation-delay: 2.5s;"></div>
+            <div class="absolute bottom-40 right-40 w-22 h-22 bg-purple-600 rounded-full opacity-20 animate-float" style="animation-delay: 3s;"></div>
+            <div class="absolute bottom-60 left-40 w-16 h-16 bg-purple-300 rounded-full opacity-35 animate-float" style="animation-delay: 1.2s;"></div>
+            <div class="absolute top-80 right-30 w-10 h-10 bg-purple-400 rounded-full opacity-40 animate-float" style="animation-delay: 0.8s;"></div>
+            <div class="absolute bottom-80 left-30 w-26 h-26 bg-purple-500 rounded-full opacity-15 animate-float" style="animation-delay: 3.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto text-center max-w-4xl relative z-10">
+            <div class="mb-8">
+                <img src="imgs/HuiLogo.png" alt="Huiron Studios Logo" class="w-24 h-24 mx-auto mb-6 rounded-full shadow-lg">
+            </div>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+                Crafting <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Immersive</span> Roblox Experiences
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
+                Huiron Studios is a premier game development studio creating cutting-edge Roblox games that captivate players worldwide. We combine innovation, quality, and community to deliver exceptional gaming adventures.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button onclick="showPage('games')" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <i class="fas fa-gamepad mr-3"></i>Explore Our Games
+                </button>
+                <button onclick="showPage('groups')" class="bg-gradient-to-r from-purple-800 to-pink-800 hover:from-purple-900 hover:to-pink-900 text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <i class="fas fa-users mr-3"></i>Join Our Community
+                </button>
+            </div>
+            <div class="mt-16">
+                <div class="animate-bounce">
+                    <i class="fas fa-chevron-down text-3xl text-purple-600 opacity-70"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Purple-Themed Landing Section -->
+    <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden">
+        <!-- Purple particles background -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-10 left-10 w-16 h-16 bg-purple-500 rounded-full opacity-20 animate-float"></div>
+            <div class="absolute top-40 right-20 w-12 h-12 bg-purple-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-20 w-20 h-20 bg-purple-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-10 right-10 w-14 h-14 bg-purple-300 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+            <div class="absolute top-60 left-40 w-18 h-18 bg-pink-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+        </div>
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                    <!-- Left Content -->
+                    <div class="space-y-8">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                            Building <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Immersive Worlds</span> for Millions
+                        </h2>
+                        <p class="text-xl text-gray-300 max-w-2xl">
+                            Huiron Studios creates unforgettable Roblox experiences that captivate players worldwide. With innovative gameplay, stunning visuals, and passionate community engagement, we're redefining what's possible on the platform.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <button onclick="showPage('games')" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                                Explore Games ›
+                            </button>
+                            <button onclick="showPage('groups')" class="bg-transparent border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white font-semibold py-4 px-10 rounded-full transition-all transform hover:scale-105">
+                                Join Community
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Content - Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <!-- Stat Card 1 -->
+                        <div class="bg-gray-800 border border-purple-600/30 rounded-2xl p-6 text-center glow-effect">
+                            <div class="w-14 h-14 mx-auto rounded-full bg-purple-900/40 flex items-center justify-center mb-4">
+                                <i class="fas fa-users text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl font-black text-white mb-2" id="players-counter">1.2K+</h3>
+                            <p class="text-purple-300 font-medium">Active Players</p>
+                        </div>
+                        
+                        <!-- Stat Card 2 -->
+                        <div class="bg-gray-800 border border-purple-600/30 rounded-2xl p-6 text-center glow-effect">
+                            <div class="w-14 h-14 mx-auto rounded-full bg-purple-900/40 flex items-center justify-center mb-4">
+                                <i class="fas fa-eye text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl font-black text-white mb-2" id="visits-counter">98K+</h3>
+                            <p class="text-purple-300 font-medium">Total Visits</p>
+                        </div>
+                        
+                        <!-- Stat Card 3 -->
+                        <div class="bg-gray-800 border border-purple-600/30 rounded-2xl p-6 text-center glow-effect">
+                            <div class="w-14 h-14 mx-auto rounded-full bg-purple-900/40 flex items-center justify-center mb-4">
+                                <i class="fas fa-gamepad text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl font-black text-white mb-2">7+</h3>
+                            <p class="text-purple-300 font-medium">Games Created</p>
+                        </div>
+                        
+                        <!-- Stat Card 4 -->
+                        <div class="bg-gray-800 border border-purple-600/30 rounded-2xl p-6 text-center glow-effect">
+                            <div class="w-14 h-14 mx-auto rounded-full bg-purple-900/40 flex items-center justify-center mb-4">
+                                <i class="fas fa-heart text-2xl text-purple-400"></i>
+                            </div>
+                            <h3 class="text-3xl md:text-4xl font-black text-white mb-2">4</h3>
+                            <p class="text-purple-300 font-medium">Active Groups</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Immersive Worlds Showcase -->
+        <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden">
+            <!-- Animated background elements -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <div class="absolute top-10 left-10 w-6 h-6 bg-blue-400 rounded-full opacity-20 animate-pulse"></div>
+                <div class="absolute top-40 right-20 w-8 h-8 bg-purple-400 rounded-full opacity-30 animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-20 left-20 w-10 h-10 bg-pink-400 rounded-full opacity-25 animate-pulse" style="animation-delay: 2s;"></div>
+                <div class="absolute bottom-40 right-40 w-12 h-12 bg-indigo-400 rounded-full opacity-20 animate-pulse" style="animation-delay: 1.5s;"></div>
+            </div>
+            
+            <div class="container mx-auto relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Worlds We've Built</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
+                        Step into the immersive universes where millions of players create memories, forge friendships, and experience adventures beyond imagination.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                        <button onclick="showPage('games')" class="btn-glow text-white font-bold py-4 px-10 rounded-full transition transform hover:scale-105 shine-effect">
-                            Explore Our Games
-                        </button>
-                        <button onclick="showPage('groups')" class="bg-transparent border-2 border-blue-500 text-white font-bold py-4 px-10 rounded-full transition hover:bg-blue-500 hover:border-blue-600">
-                            Join Our Groups
-                        </button>
-                    </div>
                 </div>
-            </section>
-            <!-- Live Stats Section -->
-            <section class="py-16 md:py-24 px-4 md:px-8 text-center">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 section-title">Check out our stats</h2>
-                    <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Real-time statistics showing our growing community and the engagement with our games.</p>
-                    <div class="stats-grid max-w-5xl mx-auto">
-                        <!-- Visits Card -->
-                        <div class="counter-card-bg p-8 rounded-2xl flex flex-col items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-blue-900/30 flex items-center justify-center mb-6">
-                                <i class="fas fa-eye text-3xl text-blue-400"></i>
+
+                <!-- Interactive Game Showcase -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                    <!-- World 1: Tower Universe -->
+                    <div class="group relative bg-gradient-to-br from-blue-900/40 to-purple-900/40 border border-blue-500/30 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform overflow-hidden">
+                            <img src="imgs/games/100 Player Troll Tower.webp" alt="Tower Universe" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Tower Universe</h3>
+                            <div class="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mb-4"></div>
+                            <p class="text-gray-300 leading-relaxed">
+                                Ascend through ever-changing towers where strategy meets chaos. Our tower experiences have become legendary playgrounds for millions.
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-blue-300 font-medium">Active Worlds</span>
+                                <span class="text-white font-bold">3+</span>
                             </div>
-                            <div class="text-center">
-                                <h3 class="text-4xl md:text-5xl font-black text-white mb-2" id="visits-counter">98.2K</h3>
-                                <p class="text-lg font-medium text-gray-300">Total Visits</p>
-                                <p class="text-sm text-gray-500 mt-2">Across all our games</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-purple-300 font-medium">Daily Players</span>
+                                <span class="text-white font-bold">800+</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-300 font-medium">Total Adventures</span>
+                                <span class="text-white font-bold">40K+</span>
                             </div>
                         </div>
-                        <!-- Players Card -->
-                        <div class="counter-card-bg p-8 rounded-2xl flex flex-col items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-green-900/30 flex items-center justify-center mb-6">
-                                <i class="fas fa-users text-3xl text-green-400"></i>
-                            </div>
-                            <div class="text-center">
-                                <h3 class="text-4xl md:text-5xl font-black text-white mb-2" id="players-counter">1,256</h3>
-                                <p class="text-lg font-medium text-gray-300">Active Players</p>
-                                <p class="text-sm text-gray-500 mt-2">Currently in our games</p>
-                            </div>
-                        </div>
-                        <!-- Games Made Card -->
-                        <div class="counter-card-bg p-8 rounded-2xl flex flex-col items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-purple-900/30 flex items-center justify-center mb-6">
-                                <i class="fas fa-gamepad text-3xl text-purple-400"></i>
-                            </div>
-                            <div class="text-center">
-                                <h3 class="text-4xl md:text-5xl font-black text-white mb-2" id="games-counter">7</h3>
-                                <p class="text-lg font-medium text-gray-300">Games Developed</p>
-                                <p class="text-sm text-gray-500 mt-2">And many more to come</p>
+                        <div class="mt-6 pt-6 border-t border-blue-500/30">
+                            <div class="flex space-x-3">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Chaos</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Strategy</span>
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Multiplayer</span>
                             </div>
                         </div>
                     </div>
+
+                    <!-- World 2: Battle Realms -->
+                    <div class="group relative bg-gradient-to-br from-purple-900/40 to-pink-900/40 border border-purple-500/30 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform overflow-hidden">
+                            <img src="imgs/games/[UPD🔥] Steal a Brawler.webp" alt="Battle Realms" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Battle Realms</h3>
+                            <div class="w-16 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mb-4"></div>
+                            <p class="text-gray-300 leading-relaxed">
+                                Enter arenas where teamwork and skill determine victory. These combat experiences test players' abilities in dynamic environments.
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-purple-300 font-medium">Active Arenas</span>
+                                <span class="text-white font-bold">2+</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-300 font-medium">Daily Battles</span>
+                                <span class="text-white font-bold">500+</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-blue-300 font-medium">Total Victories</span>
+                                <span class="text-white font-bold">25K+</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-purple-500/30">
+                            <div class="flex space-x-3">
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Combat</span>
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Teamwork</span>
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- World 3: Adventure Zones -->
+                    <div class="group relative bg-gradient-to-br from-pink-900/40 to-blue-900/40 border border-pink-500/30 rounded-3xl p-8 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/20">
+                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-pink-500 rounded-full flex items-center justify-center opacity-80 group-hover:scale-110 transition-transform overflow-hidden">
+                            <img src="imgs/games/Escape Creepy Teacher OBBY.webp" alt="Adventure Zones" class="w-full h-full object-cover">
+                        </div>
+                        <div class="mb-6">
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Adventure Zones</h3>
+                            <div class="w-16 h-1 bg-gradient-to-r from-pink-400 to-blue-400 mb-4"></div>
+                            <p class="text-gray-300 leading-relaxed">
+                                Explore mysterious lands filled with challenges and surprises. These immersive experiences push the boundaries of creativity.
+                            </p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between">
+                                <span class="text-pink-300 font-medium">Active Zones</span>
+                                <span class="text-white font-bold">2+</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-blue-300 font-medium">Daily Explorers</span>
+                                <span class="text-white font-bold">600+</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-purple-300 font-medium">Total Discoveries</span>
+                                <span class="text-white font-bold">35K+</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-pink-500/30">
+                            <div class="flex space-x-3">
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Exploration</span>
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Puzzles</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Adventure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-16">
+                    <div class="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border border-gray-700 rounded-2xl p-8 max-w-4xl mx-auto">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Explore Our Worlds?</h3>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Join millions of players who have already discovered the magic of Huiron Studios' immersive experiences.
+                        </p>
+                        <button onclick="showPage('games')" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-rocket mr-3"></i>Launch Into Adventure
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Player Stories - Circular Layout -->
+        <section class="home-only py-20 md:py-32 px-4 md:px-8 bg-black relative overflow-hidden">
+            <!-- Player Stories particles background -->
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <div class="absolute top-20 left-10 w-14 h-14 bg-purple-500 rounded-full opacity-20 animate-float"></div>
+                <div class="absolute top-40 right-20 w-12 h-12 bg-blue-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-40 left-20 w-16 h-16 bg-pink-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+                <div class="absolute bottom-20 right-10 w-10 h-10 bg-green-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+                <div class="absolute top-60 right-40 w-18 h-18 bg-yellow-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+                <div class="absolute bottom-60 left-40 w-12 h-12 bg-orange-400 rounded-full opacity-35 animate-float" style="animation-delay: 0.8s;"></div>
+                <div class="absolute top-80 left-30 w-10 h-10 bg-red-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.8s;"></div>
+            </div>
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 z-0 opacity-10">
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10"></div>
+            </div>
+            
+            <div class="container mx-auto relative z-10">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+                        Player <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Stories</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
+                        Real adventures, real memories. Hear directly from the players who bring our worlds to life.
+                    </p>
+                </div>
+
+                <!-- Circular Testimonial Layout -->
+                <div class="relative max-w-6xl mx-auto">
+                    <!-- Central Hub -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+                        <div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center shadow-2xl">
+                            <div class="w-28 h-28 md:w-36 md:h-36 bg-black rounded-full flex items-center justify-center border-4 border-purple-400">
+                                <i class="fas fa-heart text-purple-400 text-2xl md:text-3xl"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orbiting Testimonials -->
+                    <div class="relative h-[800px] md:h-[900px]">
+                        <!-- Testimonial 1 - Top Right -->
+                        <div class="absolute top-32 right-10 md:top-48 md:right-20 w-72 bg-gradient-to-br from-blue-900/80 to-purple-900/80 border-2 border-blue-400/50 rounded-2xl p-6 transform rotate-3 hover:rotate-0 transition-transform duration-300 hover:shadow-2xl hover:shadow-blue-500/30">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                                    RP
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold">RobloxPlayer123</h3>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                "The troll towers are absolutely insane! I've spent over 500 hours across Huiron's games and they just keep getting better."
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-blue-400/30">
+                                <span class="text-blue-300 text-xs">Tower Expert • 500+ hours</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 - Bottom Right -->
+                        <div class="absolute bottom-32 right-10 md:bottom-48 md:right-20 w-72 bg-gradient-to-br from-purple-900/80 to-pink-900/80 border-2 border-purple-400/50 rounded-2xl p-6 transform -rotate-2 hover:rotate-0 transition-transform duration-300 hover:shadow-2xl hover:shadow-purple-500/30">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">
+                                    GE
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold">GamingExpert</h3>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                "Huiron Studios stands out for their incredible polish and attention to detail. You can tell they genuinely care about quality."
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-purple-400/30">
+                                <span class="text-purple-300 text-xs">Game Reviewer • Content Creator</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 - Bottom Left -->
+                        <div class="absolute bottom-32 left-10 md:bottom-48 md:left-20 w-72 bg-gradient-to-br from-green-900/80 to-blue-900/80 border-2 border-green-400/50 rounded-2xl p-6 transform rotate-2 hover:rotate-0 transition-transform duration-300 hover:shadow-2xl hover:shadow-green-500/30">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-sm">
+                                    CM
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold">CommunityMember</h3>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                "I love how active the developers are in the community! They actually listen to player feedback and implement suggestions."
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-green-400/30">
+                                <span class="text-green-300 text-xs">Community Advocate • Daily Player</span>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 - Top Left -->
+                        <div class="absolute top-32 left-10 md:top-48 md:left-20 w-72 bg-gradient-to-br from-purple-900/80 to-pink-900/80 border-2 border-purple-400/50 rounded-2xl p-6 transform -rotate-3 hover:rotate-0 transition-transform duration-300 hover:shadow-2xl hover:shadow-purple-500/30">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-bold text-sm">
+                                    TS
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold">TowerSpecialist</h3>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-200 text-sm leading-relaxed">
+                                "The level design in the towers is incredible! Each floor brings new challenges and the community is amazing to play with."
+                            </p>
+                            <div class="mt-3 pt-3 border-t border-orange-400/30">
+                                <span class="text-orange-300 text-xs">Tower Master • 300+ hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Impact -->
+                <div class="mt-24 text-center">
+                    <div class="inline-grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-black text-yellow-400 mb-2">10K+</div>
+                            <div class="text-gray-300 font-medium">Happy Players</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-black text-orange-400 mb-2">98%</div>
+                            <div class="text-gray-300 font-medium">Positive Reviews</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-black text-blue-400 mb-2">500+</div>
+                            <div class="text-gray-300 font-medium">Daily Active</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-black text-green-400 mb-2">24/7</div>
+                            <div class="text-gray-300 font-medium">Support</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <button onclick="showPage('groups')" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-users mr-3"></i>Join Our Community
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Page - Dark Mode -->
+        <div id="games-page" class="page">
+            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden">
+                <!-- Game particles background -->
+                <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                    <div class="absolute top-20 left-10 w-14 h-14 bg-blue-500 rounded-full opacity-20 animate-float"></div>
+                    <div class="absolute top-40 right-20 w-12 h-12 bg-green-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+                    <div class="absolute bottom-40 left-20 w-16 h-16 bg-purple-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+                    <div class="absolute bottom-20 right-10 w-10 h-10 bg-orange-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+                    <div class="absolute top-60 right-40 w-18 h-18 bg-pink-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+                </div>
+                <div class="container mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Our Games</span>
+                        </h2>
+                        <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
+                            Immerse yourself in our diverse collection of Roblox experiences, each crafted with passion and attention to detail.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Game Showcase -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto" id="games-container">
+                        <!-- Loading placeholders -->
+                        <div class="animate-pulse bg-gray-800 border border-gray-700 rounded-2xl h-64"></div>
+                        <div class="animate-pulse bg-gray-800 border border-gray-700 rounded-2xl h-64 hidden lg:block"></div>
+                    </div>
+
+                    <!-- Game Categories Navigation -->
+                    <div class="text-center mb-16 mt-8">
+                        <div class="inline-flex flex-wrap justify-center gap-4 bg-gray-800/60 backdrop-blur-sm border border-gray-700 rounded-2xl p-4">
+                            <button class="game-filter-btn active px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full transition-all transform hover:scale-105" data-filter="all">
+                                All Games
+                            </button>
+                            <button class="game-filter-btn px-6 py-3 bg-gray-700/60 text-gray-300 font-medium rounded-full transition-all hover:bg-gray-600/60" data-filter="tower">
+                                Tower Games
+                            </button>
+                            <button class="game-filter-btn px-6 py-3 bg-gray-700/60 text-gray-300 font-medium rounded-full transition-all hover:bg-gray-600/60" data-filter="adventure">
+                                Adventure
+                            </button>
+                            <button class="game-filter-btn px-6 py-3 bg-gray-700/60 text-gray-300 font-medium rounded-full transition-all hover:bg-gray-600/60" data-filter="tycoon">
+                                Tycoon
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Stats Overview -->
+                    <div class="max-w-4xl mx-auto mb-16">
+                        <div class="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border border-gray-700 rounded-2xl p-8">
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                                <div>
+                                    <div class="text-3xl md:text-4xl font-black text-blue-400 mb-2" id="games-counter">7</div>
+                                    <div class="text-gray-300 font-medium">Total Games</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl md:text-4xl font-black text-green-400 mb-2" id="players-counter">1.2K+</div>
+                                    <div class="text-gray-300 font-medium">Active Players</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl md:text-4xl font-black text-purple-400 mb-2" id="visits-counter">98K+</div>
+                                    <div class="text-gray-300 font-medium">Total Visits</div>
+                                </div>
+                                <div>
+                                    <div class="text-3xl md:text-4xl font-black text-pink-400 mb-2">98%</div>
+                                    <div class="text-gray-300 font-medium">Positive Reviews</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <!-- Featured Groups Section -->
-            <section class="py-16 md:py-24 px-4 md:px-8 bg-gray-900/50 text-center">
+        </div>
+
+        <!-- Groups Page - Dark Mode -->
+        <div id="groups-page" class="page">
+            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden">
+                <!-- Groups particles background -->
+                <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                    <div class="absolute top-20 left-10 w-14 h-14 bg-green-500 rounded-full opacity-20 animate-float"></div>
+                    <div class="absolute top-40 right-20 w-12 h-12 bg-blue-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+                    <div class="absolute bottom-40 left-20 w-16 h-16 bg-yellow-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+                    <div class="absolute bottom-20 right-10 w-10 h-10 bg-purple-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+                    <div class="absolute top-60 right-40 w-18 h-18 bg-orange-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+                </div>
                 <div class="container mx-auto">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 section-title">Featured Groups</h2>
-                    <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Join our thriving communities and be part of the Huiron Studios family.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">Our Groups</h2>
+                    <p class="text-xl text-gray-400 text-center mb-12 max-w-2xl mx-auto">Join our thriving communities and be part of the Huiron Studios family.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         <!-- Group Card 1 -->
-<div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-    <div class="w-24 h-24 mx-auto rounded-full bg-blue-900/30 flex items-center justify-center mb-6 overflow-hidden">
-        <img src="https://i.ibb.co/JwFkCYvv/no-Filter-14.webp" 
-             alt="C&F Studioz Logo" 
-             class="w-full h-full object-cover">
-    </div>
-    <h3 class="text-2xl font-bold text-white mb-3">C&F Studioz</h3>
-    <p class="text-gray-400 mb-4">
-        A studio working on obbys and troll towers aiming for quality.
-    </p>
-    <a href="https://www.roblox.com/communities/35088318/C-F-Studioz#!/about" 
-       class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-       Join Group
-    </a>
-</div>
-
+                        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-blue-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                                <img src="https://i.ibb.co/JwFkCYvv/no-Filter-14.webp" alt="C&F Studioz Logo" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">C&F Studioz</h3>
+                            <p class="text-gray-400 mb-4">A studio working on obbys and troll towers aiming for quality.</p>
+                            <a href="https://www.roblox.com/communities/35088318/C-F-Studioz#!/about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition">Join Group</a>
+                        </div>
                         <!-- Group Card 2 -->
-                  <div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-    <div class="w-24 h-24 mx-auto rounded-full bg-green-900/30 flex items-center justify-center mb-6 overflow-hidden">
-        <img src="https://i.ibb.co/nMKGbRrT/no-Filter-15.webp" 
-             alt="Averse Industries Logo" 
-             class="w-full h-full object-cover">
-    </div>
-    <h3 class="text-2xl font-bold text-white mb-3">Averse Industries</h3>
-    <p class="text-gray-400 mb-4">
-        Although it's small now, upcoming games and projects will be releasing soon with this group.
-    </p>
-    <a href="https://www.roblox.com/communities/35624537/Averse-Industries#!/about" 
-       class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-       Join Group
-    </a>
-</div>
-
+                        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-green-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                                <img src="https://i.ibb.co/nMKGbRrT/no-Filter-15.webp" alt="Averse Industries Logo" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Averse Industries</h3>
+                            <p class="text-gray-400 mb-4">Although it's small now, upcoming games and projects will be releasing soon with this group.</p>
+                            <a href="https://www.roblox.com/communities/35624537/Averse-Industries#!/about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition">Join Group</a>
+                        </div>
                         <!-- Group Card 3 -->
-<div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-    <div class="w-24 h-24 mx-auto rounded-full bg-purple-900/30 flex items-center justify-center mb-6 overflow-hidden">
-        <img src="https://i.ibb.co/qYh3ZgCc/no-Filter-16.webp" 
-             alt="Clothing Society Logo" 
-             class="w-full h-full object-cover">
-    </div>
-    <h3 class="text-2xl font-bold text-white mb-3">Clothing Society</h3>
-    <p class="text-gray-400 mb-4">
-        One of Huirzv's most popular clothing groups, with the most popular item being pants.
-    </p>
-    <a href="https://www.roblox.com/communities/11597861/Clothing-Society#!/about" 
-       class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-       Join Group
-    </a>
-</div>
-</div>
-<div class="text-center mt-12">
-    <button onclick="showPage('groups')" class="btn-glow text-white font-bold py-4 px-10 rounded-full transition transform hover:scale-105">
-        View All Groups
-    </button>
-</div>
-</div>
-</section>
+                        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-purple-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                                <img src="https://i.ibb.co/qYh3ZgCc/no-Filter-16.webp" alt="Clothing Society Logo" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Clothing Society</h3>
+                            <p class="text-gray-400 mb-4">One of Huirzv's most popular clothing groups, with the most popular item being pants.</p>
+                            <a href="https://www.roblox.com/communities/11597861/Clothing-Society#!/about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition">Join Group</a>
+                        </div>
+                        <!-- Group Card 4 -->
+                        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition">
+                            <div class="w-20 h-20 mx-auto rounded-full bg-yellow-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                                <img src="https://i.ibb.co/wNkrDbr6/noFilter.webp" alt="Spring Resorts Logo" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Spring Resorts</h3>
+                            <p class="text-gray-400 mb-4">A roleplay group called Spring Resorts, using RoRanks, a ranking service also provided by Huirzv.</p>
+                            <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition">Join Group</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-            <!-- About Section -->
-            <section id="about" class="py-16 md:py-24 px-4 md:px-8 text-center">
+        <!-- About Page - Dark Mode -->
+        <div id="about-page" class="page">
+            <section class="pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-black relative overflow-hidden">
+                <!-- About particles background -->
+                <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                    <div class="absolute top-20 left-10 w-14 h-14 bg-purple-500 rounded-full opacity-20 animate-float"></div>
+                    <div class="absolute top-40 right-20 w-12 h-12 bg-blue-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+                    <div class="absolute bottom-40 left-20 w-16 h-16 bg-pink-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+                    <div class="absolute bottom-20 right-10 w-10 h-10 bg-green-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+                    <div class="absolute top-60 right-40 w-18 h-18 bg-yellow-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+                </div>
                 <div class="container mx-auto max-w-4xl">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 section-title">About Huiron Studios</h2>
-                    <p class="text-gray-400 mb-8 text-lg">
-                        Founded in 2025, Although Huiron is quite small now, we prioritize quality on our experiences, ensuring players have a great time. With upcoming projects, we do believe we can take Huiron to the next level, starting now.
-                    </p>
-                    <p class="text-gray-400 text-lg">
-                        Huiron is originally based off the username Huirzv, representing him. Our mission is to create new experiences where we can be proud of, and scale it up to new games and platforms.
-                    </p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">About Huiron Studios</h2>
+                    <p class="text-xl text-gray-400 text-center mb-12">Founded in 2025, Huiron Studios is committed to quality and innovation in the Roblox ecosystem.</p>
+                    
+                    <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-sm">
+                        <p class="text-lg text-gray-300 mb-6">
+                            Although Huiron is quite small now, we prioritize quality on our experiences, ensuring players have a great time. With upcoming projects, we do believe we can take Huiron to the next level, starting now.
+                        </p>
+                        <p class="text-lg text-gray-300">
+                            Huiron is originally based off the username Huirzv, representing him. Our mission is to create new experiences where we can be proud of, and scale it up to new games and platforms.
+                        </p>
+                    </div>
+
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
                         <div class="text-center">
                             <div class="w-16 h-16 mx-auto rounded-full bg-blue-900/30 flex items-center justify-center mb-4">
@@ -336,583 +667,100 @@
                             <p class="text-gray-400">Our players are at the heart of everything we do and create.</p>
                         </div>
                         <div class="text-center">
-                            <div class="w-16 h-16 mx-auto rounded-full bg-purple-900/30 flex items-center justify-center mb-4">
-                                <i class="fas fa-lightbulb text-2xl text-purple-400"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-2">Innovation</h3>
-                            <p class="text-gray-400">We're always exploring new ideas and pushing creative boundaries.</p>
+                            <div class="text-3xl md:text-4xl font-black text-purple-400 mb-2">10K+</div>
+                            <div class="text-gray-300 font-medium">Happy Players</div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Contact Section -->
-            <section id="contact" class="py-16 md:py-24 px-4 md:px-8 bg-gray-900/50 text-center">
-                <div class="container mx-auto max-w-xl">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 section-title">Get In Touch</h2>
-                    <p class="text-gray-400 mb-8 text-lg">
-                        Have a question or a business inquiry? Feel free to reach out to us! We'd love to hear from you.
-                    </p>
-                    <a href="mailto:contact@huironstudios.com" class="btn-glow inline-block text-white font-bold py-4 px-10 rounded-full transition transform hover:scale-105 mb-6">
-                        <i class="fas fa-envelope mr-2"></i> contact@huironstudios.dev
-                    </a>
-                    <div class="flex justify-center space-x-6 mt-8">
-                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-blue-400 hover:bg-blue-400 hover:text-white transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-purple-400 hover:bg-purple-400 hover:text-white transition">
-                            <i class="fab fa-discord"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-red-400 hover:bg-red-400 hover:text-white transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- Games Page -->
-        <div id="games-page" class="page">
-            <section class="py-16 md:py-24 px-4 md:px-8 bg-gray-900/50 min-h-screen">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white text-center mb-4 section-title">Our Games</h2>
-                    <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Discover our portfolio of immersive Roblox experiences that keep players coming back for more.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                        <!-- Game Card 1 -->
-                      <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/0yDLJ0Y6/noFilter.webp" 
-             alt="Sabotage Tower Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">Papap Dol Game [UPDATE]</h3>
-        <p class="text-gray-400 mb-4">
-            Drive big trucks, deliver goods, and vibe to the music with friends. 
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/112018694278029/Papap-Dol-Game-UPDATE" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">128</span> players
-                </span>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">8.2K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-                        <!-- Game Card 2 -->
-                     <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/mrrHHPHJ/noFilter.webp" 
-             alt="100 Player Troll Tower Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">100 Player Troll Tower</h3>
-        <p class="text-gray-400 mb-4">
-            Join hundreds of players in this chaotic troll tower. Outsmart, climb, and survive in the ultimate test of skill and patience.
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/127123367172919/100-Player-Troll-Tower" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">277</span> players
-                </span>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">13.1K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-                        <!-- Game Card 3 -->
-                       <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/Zp8YXJG2/noFilter.webp" 
-             alt="Pranking Tower Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">Pranking Tower</h3>
-        <p class="text-gray-400 mb-4">
-            Climb, prank, and outsmart your friends in this chaotic troll tower packed with tricks and surprises.
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/78579013365632/Pranking-Tower" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">312</span> players
-                </span>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">16.4K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-
-                        <!-- Game Card 4 -->
-                        <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/1cb0G3N/noFilter.webp" 
-             alt="Escape Creepy Teacher OBBY Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">Escape Creepy Teacher OBBY</h3>
-        <p class="text-gray-400 mb-4">
-            Can you outsmart the creepy teacher and escape her traps? A fun and spooky obby challenge awaits!
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/98955567405284/Escape-Creepy-Teacher-OBBY" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">96</span> players
-                </span>
-
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">5.4K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-
-                        <!-- Game Card 5 -->
-                       <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/rKfB4z6N/noFilter.webp" 
-             alt="Troll Others Tower Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">Troll Others Tower</h3>
-        <p class="text-gray-400 mb-4">
-            Climb higher while trolling others along the way. Outsmart, prank, and survive in this chaotic tower adventure.
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/80301995412912/Troll-Others-Tower" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">82</span> players
-                </span>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">2.6K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-
-                        <!-- Game Card 6 -->
-                       <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/GwdM9Xp/noFilter.webp" 
-             alt="Sabotage Tower 2 Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">[UPD🔥] Steal a Brawler</h3>
-        <p class="text-gray-400 mb-4">
-            Assemble your squad of powerful Brawlers and steal from other players and protect your own! ⚔️
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/6776378574/UPD-Steal-a-Brawler" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">229</span> players
-                </span>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">10.7K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-
-                        <!-- Game Card 7 -->
-                       <div class="game-card rounded-2xl overflow-hidden">
-    <div class="game-image">
-        <img src="https://i.ibb.co/Xf5tXSnD/noFilter.webp" 
-             alt="Private Island Tycoon Thumbnail" 
-             class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-        <h3 class="text-2xl font-bold text-white mb-3">An Average Tycoon [Patch]</h3>
-        <p class="text-gray-400 mb-4">
-            The World Is in Ruin. You and Few other survivors have left to an island to escape the on-going calamity in the world.
-        </p>
-        <div class="flex flex-col space-y-3 mt-4">
-            <div class="flex items-center justify-between">
-                <a href="https://www.roblox.com/games/7106657586/An-Average-Tycoon-Patch" 
-                   target="_blank" 
-                   class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                    Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <span class="text-sm font-bold text-gray-300 flex items-center">
-                    <i class="fas fa-users mr-2 text-green-400"></i>
-                    <span class="text-lg mr-1">132</span> players
-                </span>
-            </div>
-            <div class="text-right">
-                <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                    <i class="fas fa-eye mr-2 text-blue-400"></i>
-                    <span class="text-base mr-1">7.8K</span> visits
-                </span>
-            </div>
-        </div>
-    </div>
-</div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- Groups Page -->
-        <div id="groups-page" class="page">
-            <section class="py-16 md:py-24 px-4 md:px-8 min-h-screen">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-white text-center mb-4 section-title">Our Groups</h2>
-                    <p class="text-gray-400 text-center mb-12 max-w-2xl mx-auto">Join our thriving communities and be part of the Huiron Studios family.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <!-- Group Card 1 -->
-                        <div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-                            <div class="w-24 h-24 mx-auto rounded-full bg-blue-900/30 flex items-center justify-center mb-6 overflow-hidden">
-                                <img src="https://i.ibb.co/JwFkCYvv/no-Filter-14.webp" 
-                                     alt="C&F Studioz Logo" 
-                                     class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">C&F Studioz</h3>
-                            <p class="text-gray-400 mb-4">
-                                A studio working on obbys and troll towers aiming for quality.
-                            </p>
-                            <a href="https://www.roblox.com/communities/35088318/C-F-Studioz#!/about" 
-                               class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-                               Join Group
-                            </a>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-black text-pink-400 mb-2">98%</div>
+                            <div class="text-gray-300 font-medium">Positive Reviews</div>
                         </div>
-                        <!-- Group Card 2 -->
-                        <div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-                            <div class="w-24 h-24 mx-auto rounded-full bg-green-900/30 flex items-center justify-center mb-6 overflow-hidden">
-                                <img src="https://i.ibb.co/nMKGbRrT/no-Filter-15.webp" 
-                                     alt="Averse Industries Logo" 
-                                     class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Averse Industries</h3>
-                            <p class="text-gray-400 mb-4">
-                                Although it's small now, upcoming games and projects will be releasing soon with this group.
-                            </p>
-                            <a href="https://www.roblox.com/communities/35624537/Averse-Industries#!/about" 
-                               class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-                               Join Group
-                            </a>
-                        </div>
-                        <!-- Group Card 3 -->
-                        <div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-                            <div class="w-24 h-24 mx-auto rounded-full bg-purple-900/30 flex items-center justify-center mb-6 overflow-hidden">
-                                <img src="https://i.ibb.co/qYh3ZgCc/no-Filter-16.webp" 
-                                     alt="Clothing Society Logo" 
-                                     class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Clothing Society</h3>
-                            <p class="text-gray-400 mb-4">
-                                One of Huirzv's most popular clothing groups, with the most popular item being pants.
-                            </p>
-                            <a href="https://www.roblox.com/communities/11597861/Clothing-Society#!/about" 
-                               class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-                               Join Group
-                            </a>
-                        </div>
-                        <!-- Group Card 4 -->
-                        <div class="group-card rounded-2xl overflow-hidden p-6 text-center">
-                            <div class="w-24 h-24 mx-auto rounded-full bg-yellow-900/30 flex items-center justify-center mb-6 overflow-hidden">
-                                <img src="https://i.ibb.co/wNkrDbr6/noFilter.webp" 
-                                     alt="Huiron Studios Logo" 
-                                     class="w-full h-full object-cover">
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-3">Spring Resorts</h3>
-                            <p class="text-gray-400 mb-4">
-                                A roleplay group called Spring Resorts, using RoRanks, a ranking service also provided by Huirzv.
-                            </p>
-                            <a href="#" 
-                               class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition inline-block">
-                               Join Group
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </section>
         </div>
     </main>
-    <footer class="bg-gray-900 text-center p-8 border-t border-gray-800">
+
+    <!-- Shared Featured Groups Section (bottom across all pages) -->
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-black relative overflow-hidden">
+        <!-- Groups particles background -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-14 h-14 bg-blue-500 rounded-full opacity-20 animate-float"></div>
+            <div class="absolute top-40 right-20 w-12 h-12 bg-green-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-40 left-20 w-16 h-16 bg-purple-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 right-10 w-10 h-10 bg-yellow-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+            <div class="absolute top-60 right-40 w-18 h-18 bg-pink-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+        </div>
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Groups</h2>
+            <p class="text-gray-400 mb-12 max-w-2xl mx-auto">Join our thriving communities and be part of the Huiron Studios family.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Group Card 1 -->
+                <div class="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 text-center hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-blue-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                        <img src="https://i.ibb.co/JwFkCYvv/no-Filter-14.webp" alt="C&F Studioz Logo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">C&F Studioz</h3>
+                    <p class="text-gray-400 mb-4">A studio working on obbys and troll towers aiming for quality.</p>
+                    <a href="https://www.roblox.com/communities/35088318/C-F-Studioz#!/about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition">Join Group</a>
+                </div>
+                <!-- Group Card 2 -->
+                <div class="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 text-center hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-green-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                        <img src="https://i.ibb.co/nMKGbRrT/no-Filter-15.webp" alt="Averse Industries Logo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Averse Industries</h3>
+                    <p class="text-gray-400 mb-4">Although it's small now, upcoming games and projects will be releasing soon with this group.</p>
+                    <a href="https://www.roblox.com/communities/35624537/Averse-Industries#!/about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition">Join Group</a>
+                </div>
+                <!-- Group Card 3 -->
+                <div class="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 text-center hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="w-24 h-24 mx-auto rounded-full bg-purple-900/30 flex items-center justify-center mb-6 overflow-hidden">
+                        <img src="https://i.ibb.co/qYh3ZgCc/no-Filter-16.webp" alt="Clothing Society Logo" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Clothing Society</h3>
+                    <p class="text-gray-400 mb-4">One of Huirzv's most popular clothing groups, with the most popular item being pants.</p>
+                    <a href="https://www.roblox.com/communities/11597861/Clothing-Society#!/about" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full transition">Join Group</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <button onclick="showPage('groups')" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg">View All Groups</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (bottom across all pages) -->
+    <section class="py-16 md:py-24 px-4 md:px-8 bg-black text-center relative overflow-hidden">
+        <!-- Contact particles background -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-14 h-14 bg-purple-500 rounded-full opacity-20 animate-float"></div>
+            <div class="absolute top-40 right-20 w-12 h-12 bg-blue-400 rounded-full opacity-30 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-40 left-20 w-16 h-16 bg-pink-600 rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 right-10 w-10 h-10 bg-green-400 rounded-full opacity-40 animate-float" style="animation-delay: 1.5s;"></div>
+            <div class="absolute top-60 right-40 w-18 h-18 bg-yellow-500 rounded-full opacity-30 animate-float" style="animation-delay: 2.5s;"></div>
+        </div>
+        <div class="container mx-auto max-w-xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-gray-400 mb-8 text-lg">Have a question or a business inquiry? Reach out—we'd love to hear from you.</p>
+            <a href="mailto:contact@huironstudios.com" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-4 px-10 rounded-full transition transform hover:scale-105 shadow-lg mb-6">
+                <i class="fas fa-envelope mr-2"></i> contact@huironstudios.dev
+            </a>
+            <div class="flex justify-center space-x-6 mt-8">
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-purple-400 hover:bg-purple-600 hover:text-white transition"><i class="fab fa-discord"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-red-400 hover:bg-red-600 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-blue-500 hover:bg-blue-700 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center p-8">
         <div class="container mx-auto">
-            <p class="text-gray-500 text-sm">&copy; 2025 Huiron Studios. All rights reserved.</p>
-            <p class="text-gray-500 text-xs mt-2">
+            <p class="text-gray-400">&copy; 2025 Huiron Studios. All rights reserved.</p>
+            <p class="text-gray-500 text-sm mt-2">
                 The user ID for this session is: <span class="font-mono text-blue-400" id="user-id">anonymous</span>
             </p>
         </div>
     </footer>
-    <script>
-    // Game configuration with universe ID
-    const gameConfig = {
-        "games": [
-            {
-                "name": "Papap Dol Game [UPDATE]",
-                "universeId": 7825866998,
-                "image": "https://i.ibb.co/pj7QS979/noFilter.webp",
-                "url": "https://www.roblox.com/games/112018694278029/Papap-Dol-Game-UPDATE"
-            },
-            {
-                "name": "100 Player Troll Tower",
-                "universeId": 7841567199,
-                "image": "https://i.ibb.co/mrrHHPHJ/noFilter.webp",
-                "url": "https://www.roblox.com/games/127123367172919/100-Player-Troll-Tower"
-            },
-            {
-                "name": "Pranking Tower",
-                "universeId": 7688903077,
-                "image": "https://i.ibb.co/Zp8YXJG2/noFilter.webp",
-                "url": "https://www.roblox.com/games/78579013365632/Pranking-Tower"
-            },
-            {
-                "name": "Escape Creepy Teacher OBBY",
-                "universeId": 6683527149,
-                "image": "https://i.ibb.co/1cb0G3N/noFilter.webp",
-                "url": "https://www.roblox.com/games/98955567405284/Escape-Creepy-Teacher-OBBY"
-            },
-            {
-                "name": "Troll Others Tower",
-                "universeId": 7567817880,
-                "image": "https://i.ibb.co/rKfB4z6N/noFilter.webp",
-                "url": "https://www.roblox.com/games/80301995412912/Troll-Others-Tower"
-            },
-            {
-                "name": "[UPD🔥] Steal a Brawler",
-                "universeId": 2569475263,
-                "image": "https://i.ibb.co/GwdM9Xp/noFilter.webp",
-                "url": "https://www.roblox.com/games/6776378574/UPD-Steal-a-Brawler"
-            },
-            {
-                "name": "An Average Tycoon",
-                "universeId": 2748312481,
-                "image": "https://i.ibb.co/Xf5tXSnD/noFilter.webp",
-                "url": "https://www.roblox.com/games/7106657586/An-Average-Tycoon-Patch"
-            }
-        ]
-    };
 
-    // Function to format numbers with K/M suffixes
-    function formatNumber(num) {
-        if (num >= 1000000) {
-            return (num / 1000000).toFixed(1) + 'M';
-        } else if (num >= 1000) {
-            return (num / 1000).toFixed(1) + 'K';
-        }
-        return num.toString();
-    }
-
-    // Function to fetch stats from your backend API
-    async function fetchStats() {
-        try {
-            const universeIds = gameConfig.games.map(game => game.universeId).join(',');
-            
-            // Direct call to your backend without proxies
-            const response = await fetch(`/stats/${universeIds}`);
-            
-            if (response.ok) {
-                const data = await response.json();
-                
-                // Update overall stats counters
-                document.getElementById('visits-counter').textContent = formatNumber(data.allVisits);
-                document.getElementById('players-counter').textContent = formatNumber(data.allPlaying);
-                document.getElementById('games-counter').textContent = gameConfig.games.length;
-                
-                // Update individual game stats and regenerate game cards
-                updateGameCards(data.games);
-                
-                console.log('Stats updated successfully!');
-            } else {
-                throw new Error('Failed to fetch stats from backend');
-            }
-            
-        } catch (error) {
-            console.error('Error fetching stats:', error);
-            console.log('Using fallback stats...');
-            
-            // Use fallback data if API fails
-            const fallbackData = {
-                allVisits: 98200,
-                allPlaying: 1256,
-                games: gameConfig.games.map((game, index) => ({
-                    id: game.universeId,
-                    visits: Math.floor(Math.random() * 20000) + 5000,
-                    playing: Math.floor(Math.random() * 500) + 50
-                }))
-            };
-            
-            document.getElementById('visits-counter').textContent = formatNumber(fallbackData.allVisits);
-            document.getElementById('players-counter').textContent = formatNumber(fallbackData.allPlaying);
-            document.getElementById('games-counter').textContent = gameConfig.games.length;
-            
-            updateGameCards(fallbackData.games);
-        }
-    }
-
-    // Function to update game cards with real stats
-    function updateGameCards(gameStats) {
-        const gamesContainer = document.querySelector('#games-page .grid');
-        if (!gamesContainer) return;
-        
-        // Clear existing game cards
-        gamesContainer.innerHTML = '';
-        
-        // Create new game cards with real stats
-        gameConfig.games.forEach(game => {
-            const stats = gameStats.find(stat => stat.id === game.universeId) || { visits: 0, playing: 0 };
-            
-            const gameCard = document.createElement('div');
-            gameCard.className = 'game-card rounded-2xl overflow-hidden';
-            gameCard.innerHTML = `
-                <div class="game-image">
-                    <img src="${game.image}" 
-                         alt="${game.name} Thumbnail" 
-                         class="w-full h-full object-cover">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-2xl font-bold text-white mb-3">${game.name}</h3>
-                    <p class="text-gray-400 mb-4">
-                        Play this game today, most games listed here Huiron Studios takes the role of analytics, investor, partner, or owner.
-                    </p>
-                    <div class="flex flex-col space-y-3 mt-4">
-                        <div class="flex items-center justify-between">
-                            <a href="${game.url}" 
-                               target="_blank" 
-                               class="inline-flex items-center text-blue-400 hover:text-blue-300 transition font-medium group">
-                                Play Now <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                            <span class="text-sm font-bold text-gray-300 flex items-center">
-                                <i class="fas fa-users mr-2 text-green-400"></i>
-                                <span class="text-lg mr-1">${formatNumber(stats.playing)}</span> players
-                            </span>
-                        </div>
-                        <div class="text-right">
-                            <span class="text-xs font-medium text-gray-500 flex items-center justify-end">
-                                <i class="fas fa-eye mr-2 text-blue-400"></i>
-                                <span class="text-base mr-1">${formatNumber(stats.visits)}</span> visits
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            gamesContainer.appendChild(gameCard);
-        });
-    }
-
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('max-h-0');
-        menu.classList.toggle('max-h-64');
-        menu.classList.toggle('py-4');
-    });
-    document.querySelectorAll('#mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.add('hidden');
-            document.getElementById('mobile-menu').classList.remove('max-h-64');
-            document.getElementById('mobile-menu').classList.add('max-h-0');
-        });
-    });
-    function createParticles() {
-        const particlesContainer = document.getElementById('particles');
-        const particleCount = 50;
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            const size = Math.random() * 4 + 2;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}%`;
-            particle.style.top = `${Math.random() * 100}%`;
-            const animationDuration = Math.random() * 10 + 10;
-            particle.style.animation = `float ${animationDuration}s infinite ease-in-out`;
-            particle.style.animationDelay = `${Math.random() * 5}s`;
-            particle.style.opacity = Math.random() * 0.5 + 0.1;
-            particlesContainer.appendChild(particle);
-        }
-    }
-    function showPage(pageId) {
-        document.querySelectorAll('.page').forEach(page => {
-            page.classList.remove('active');
-        });
-        document.getElementById(`${pageId}-page`).classList.add('active');
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const pageId = link.getAttribute('data-page');
-            showPage(pageId);
-        });
-    });
-    window.addEventListener('load', () => {
-        createParticles();
-        fetchStats();
-    });
-    
-    // Refresh stats every 30 seconds
-    setInterval(fetchStats, 30000);
-</script>
+    <script src="js/main.js"></script>
 </body>
 </html>

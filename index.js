@@ -4,6 +4,10 @@ const axios = require("axios");
 
 const app = express();
 
+// Serve static files from 'styles' and 'js' directories
+app.use('/styles', express.static(path.join(__dirname, 'styles')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'))
 })
